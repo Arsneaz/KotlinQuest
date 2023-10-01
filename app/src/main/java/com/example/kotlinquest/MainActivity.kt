@@ -1,7 +1,14 @@
 package com.example.kotlinquest
 
+// Hello, I'm Emu Ottori, Emu is meaning smile
+
+// There's something wrong with the SkillFragment (especially on navigateToDetail function)
+
+import android.content.Context
 import android.os.Bundle
+import android.util.AttributeSet
 import android.view.Menu
+import android.view.View
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -37,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_skill
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
