@@ -54,9 +54,9 @@ class SkillFragment : Fragment() {
         recyclerView.adapter = adapter
         searchView = view.findViewById(R.id.search_action)
 
-//        adapter.onItemClick = {
-//            navigateToDetail(it.heading)
-//        }
+        adapter.onItemClick = {
+            navigateToDetail(it.heading)
+        }
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -77,9 +77,9 @@ class SkillFragment : Fragment() {
         t1 = null
     }
 
-//    private fun navigateToDetail(extraName: String){
-//        findNavController().navigate(SkillFragmentDirections.actionNavSkillToSkillDetail(extraName))
-//    }
+    private fun navigateToDetail(extraName: String){
+        findNavController().navigate(SkillFragmentDirections.actionNavSkillToSkillDetail(extraName))
+    }
 
     private fun filterList(query: String?) {
 
