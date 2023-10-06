@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="image_ids">
+        <item>@drawable/cpp_logo</item>
+        <item>@drawable/c_logo</item>
+        <item>@drawable/py_logo</item>
+        <item>@drawable/html_logo</item>
+        <item>@drawable/css_logo</item>
+    </integer-array>
+
+    <string-array name="headings">
+        <item>@string/text_cpp</item>
+        <item>@string/text_c</item>
+        <item>@string/text_py</item>
+        <item>@string/text_html</item>
+        <item>@string/text_css</item>
+    </string-array>
+</resources>

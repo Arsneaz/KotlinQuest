@@ -1,7 +1,6 @@
 package com.example.kotlinquest
 
 // Hello, I'm Emu Ottori, Emu is meaning smile
-
 // There's something wrong with the SkillFragment (especially on navigateToDetail function)
 
 import android.content.Context
