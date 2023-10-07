@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlinquest.R
 import com.example.kotlinquest.databinding.FragmentSkillBinding
+import com.example.kotlinquest.ui.helper.ConstraintUtil
 import kotlin.collections.ArrayList
 import java.util.*
 
@@ -32,8 +33,8 @@ class SkillFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        dataInitialize()
         setupRecyclerView()
+        dataInitialize()
         setupAdapter()
         setupSearchView()
 
@@ -90,20 +91,22 @@ class SkillFragment : Fragment() {
         }
     }
 
+    // Using helper package to simplified things
     private fun dataInitialize(){
         skillArrayList = arrayListOf()
 
-        imageId = resources.getIntArray(R.array.image_ids)
-        heading = resources.getStringArray(R.array.headings)
-
-        getUserData()
+//        imageId = resources.getIntArray(R.array.image_ids)
+//        heading = resources.getStringArray(R.array.headings)
+//
+//        getUserData()
+        skillArrayList.addAll(ConstraintUtil.getSkillData(this))
     }
 
-    private fun getUserData() {
-
-        for (i in imageId.indices){
-            val skill = Skill(imageId[i],heading[i])
-            skillArrayList.add(skill)
-        }
-    }
+//    private fun getUserData() {
+//
+//        for (i in imageId.indices){
+//            val skill = Skill(imageId[i],heading[i])
+//            skillArrayList.add(skill)
+//        }
+//    }
 }
