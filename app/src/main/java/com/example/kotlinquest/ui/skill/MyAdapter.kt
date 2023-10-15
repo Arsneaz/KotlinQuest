@@ -39,7 +39,7 @@ class MyAdapter(private var list: ArrayList<Skill>) : RecyclerView.Adapter<MyAda
         }
     }
 
-    // Using bindingitemViewBinding
+    // Using bindingitem ViewBinding
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
         val titleImage : AppCompatImageView = itemView.findViewById(R.id.imageView)
