@@ -11,8 +11,8 @@ import com.example.kotlinquest.databinding.ActivityRegisterBinding
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

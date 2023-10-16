@@ -11,25 +11,25 @@ import com.example.kotlinquest.databinding.SplashBinding
 class Splash : AppCompatActivity() {
     private lateinit var binding: SplashBinding
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         binding = SplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         supportActionBar?.hide()
 
-
         val isLoggedIn = checkLoginStatus()
 
-        if (!isLoggedIn) {
+        if (isLoggedIn) {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         } else {
             Handler(Looper.getMainLooper()).postDelayed({
                 val intent = Intent(this@Splash, LoginActivity::class.java)
                 startActivity(intent)
             }, 3000)
+            finish()
         }
-        finish()
     }
 
     private fun checkLoginStatus(): Boolean{

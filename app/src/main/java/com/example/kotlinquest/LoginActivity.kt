@@ -10,8 +10,8 @@ import com.example.kotlinquest.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -34,7 +34,12 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show()
             }
+        }
 
+        binding.btnRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
